@@ -1,8 +1,7 @@
 {
   "profiles": {
     "CLI": {
-      "commandName": "Project",
-      "commandLineArgs": " -t \"D:\\Github Mathan\\CLI-demo\\CLISolution\\hello.json\" --all \"D:\\Github Mathan\\CLI-demo\\CLISolution\\ConventionCheckerLib\\Model\\TemplateRules\"\r\n"
+      "commandName": "Project"
     }
   }
 }

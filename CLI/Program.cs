@@ -21,26 +21,26 @@ var templateOption = new Option<string>(
      description: "Template file path and name"
    );
 
-rootCommand.AddOption(templateOption);
-rootCommand.SetHandler(handler =>
-{
 
-});
+
+
+rootCommand.AddOption(templateOption);
+
 
 var fileOption = new Option<string>(
            aliases: new[] { "--file", "-f" },
-           description: "First file path"
+           description: "Specify the path of the first file  (as absolute path)"
        );
 
 
 var AllFilesOption = new Option<string>(
     aliases: new[] { "--all", "-a" },
-    description: "Second file path"
+    description: "Specify the path of the directory (as absolute path)"
 );
 
 var RecursiveOption = new Option<string>(
     aliases: new[] { "--recursive", "-r" },
-    description: "Second file path"
+    description: "Specify the path of the directory (as absolute path)"
 );
 
 rootCommand.AddOption(fileOption);
@@ -49,6 +49,17 @@ rootCommand.AddOption(AllFilesOption);
 
 rootCommand.SetHandler((template, file, recursive, all) =>
 {
+    if(file == null && recursive == null && all == null && template == null)
+    {
+        Console.WriteLine("*********************************************************************");
+        Console.WriteLine("                             NAMECHECK                                ");
+        Console.WriteLine("**********************************************************************");
+        Console.WriteLine(" NameCheck: A lightweight and intuitive tool for checking naming \n " +
+                          "    conventions in your codebase. Ensure consistency and\n " +
+                          "            readability across your project with ease");
+
+        return;
+    }
     if (file != null && recursive == null && all == null)
     {
         fileReader.ReadFileByFullPath(file);
@@ -256,6 +267,8 @@ void DisplayResult(List<string> following, List<string> violating, string dataSt
     }
 
 }
+
+
 
 
 return await rootCommand.InvokeAsync(args);

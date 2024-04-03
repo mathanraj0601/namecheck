@@ -1,14 +1,26 @@
 ﻿<Project Sdk="Microsoft.NET.Sdk">
 
-  <PropertyGroup>
-    <OutputType>Exe</OutputType>
-    <TargetFramework>net8.0</TargetFramework>
-    <ImplicitUsings>enable</ImplicitUsings>
-    <Nullable>enable</Nullable>
-	<!--<PackAsTool>true</PackAsTool>
-	<ToolCommandName>namecheck</ToolCommandName>
-	<PackageOutputPath>./nupkg</PackageOutputPath>-->
-  </PropertyGroup>
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>net8.0</TargetFramework>
+		<ImplicitUsings>enable</ImplicitUsings>
+		<Nullable>enable</Nullable>
+		<PackAsTool>true</PackAsTool>
+		<ToolCommandName>namecheck</ToolCommandName>
+		<PackageOutputPath>./nupkg</PackageOutputPath>
+		<PackageId>NameCheck.CLI</PackageId>
+		<Title>NameCheck.CLI</Title>
+		<Authors>Mathanraj T</Authors>
+		<Company>Mathanraj T</Company>
+		<Product>NameCheck</Product>
+		<Description>A lightweight and intuitive CLI tool for checking naming conventions in your codebase. </Description>
+		<RepositoryUrl>https://github.com/mathanraj0601/namecheck</RepositoryUrl>
+		<RepositoryType>git</RepositoryType>
+		<PackageTags>namechech clitool convention-checker</PackageTags>
+		<PackageReadmeFile>Readme.md</PackageReadmeFile>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
+		<Version>1.0.1</Version>
+	</PropertyGroup>
 
   <ItemGroup>
     <ProjectReference Include="..\ConventionCheckerLib\ConventionCheckerLib.csproj" />
@@ -20,6 +32,13 @@
 
     <ItemGroup>
       <Folder Include="nupkg\" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <None Update="Readme.md">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
     </ItemGroup>
 
 </Project>
