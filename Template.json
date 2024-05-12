@@ -1,0 +1,55 @@
+{
+  "RuleName": "Default",
+  "NameSpaceRule": {
+    "Convention": "PASCALCASE"
+  },
+  "ClassRule": {
+    "PrivateConvention": "PASCALCASE",
+    "PublicConvention": "CAMELCASE",
+    "InternalConvention": "PASCALCASE   ",
+    "ProtectedConvention": "PASCALCASE"
+  },
+  "InterfaceRule": {
+    "PublicConvention": "PASCALCASE",
+    "InternalConvention": "PASCALCASE"
+  },
+  "MethodRule": {
+    "PublicConvention": "PASCALCASE",
+    "PrivateConvention": "PASCALCASE",
+    "InternalConvention": "PASCALCASE",
+    "ProtectedConvention": "PASCALCASE"
+  },
+  "PropertyRule": {
+    "PublicConvention": "PASCALCASE",
+    "PrivateConvention": "PASCALCASE",
+    "InternalConvention": "PASCALCASE",
+    "ProtectedConvention": "PASCALCASE"
+  },
+  "FieldRule": {
+    "PublicConvention": "PASCALCASE",
+    "PrivateConvention": "PASCALCASE",
+    "InternalConvention": "PASCALCASE",
+    "ProtectedConvention": "PASCALCASE"
+  },
+  "StructRule": {
+    "PublicConvention": "PASCALCASE",
+    "InternalConvention": "PASCALCASE"
+  },
+  "EnumRule": {
+    "Convention": "PASCALCASE"
+  },
+  "ConstantRule": {
+    "Convention": "UPPERCASE"
+  },
+  "RecordRule": {
+    "PublicConvention": "PASCALCASE",
+    "InternalConvention": "PASCALCASE"
+  },
+  "DelegateRule": {
+    "PublicConvention": "PASCALCASE",
+    "InternalConvention": "PASCALCASE"
+  },
+  "VariableRule": {
+    "Convention": "PASCALCASE"
+  }
+}
